@@ -1,14 +1,14 @@
 import os
 
 class Config:
-    API_ID = int(os.environ.get("API_ID", ""))
+    API_ID = int(os.environ.get("API_ID", "0"))
     API_HASH = os.environ.get("API_HASH", "")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
     MONGO_URI = os.environ.get("MONGO_URI", "")
     DB_NAME = os.environ.get("DB_NAME", "VideoBot")
     FSUB_CHANNEL = int(os.environ.get("FSUB_CHANNEL", "-100")) 
     
-    # ৫টি চ্যানেলের আইডি
+    # ৫টি চ্যানেলের আইডি (Koyeb ভেরিয়েবল থেকে আসবে)
     CHANNELS = {
         "indian": int(os.environ.get("INDIAN_CH", "-100")),
         "english": int(os.environ.get("ENGLISH_CH", "-100")),
@@ -18,4 +18,6 @@ class Config:
     }
     
     # শর্টনার সেটিংস
+    SHORTENER_URL = os.environ.get("SHORTENER_URL", "")
+    SHORTENER_API = os.environ.get("SHORTENER_API", "")
     SHORTENER_ON = os.environ.get("SHORTENER_ON", "False").lower() == "true"
