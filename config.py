@@ -7,8 +7,8 @@ class Config:
     MONGO_URI = os.environ.get("MONGO_URI", "")
     DB_NAME = os.environ.get("DB_NAME", "VideoBot")
     FSUB_CHANNEL = int(os.environ.get("FSUB_CHANNEL", "-100")) 
+    FSUB_LINK = os.environ.get("FSUB_LINK", "https://t.me/StreamAlertsIndia")
     
-    # ৫টি চ্যানেলের আইডি (Koyeb ভেরিয়েবল থেকে আসবে)
     CHANNELS = {
         "indian": int(os.environ.get("INDIAN_CH", "-100")),
         "english": int(os.environ.get("ENGLISH_CH", "-100")),
@@ -17,7 +17,6 @@ class Config:
         "viral": int(os.environ.get("VIRAL_CH", "-100"))
     }
     
-    # শর্টনার সেটিংস
     SHORTENER_URL = os.environ.get("SHORTENER_URL", "")
     SHORTENER_API = os.environ.get("SHORTENER_API", "")
     SHORTENER_ON = os.environ.get("SHORTENER_ON", "False").lower() == "true"
