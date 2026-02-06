@@ -17,6 +17,8 @@ class Config:
         "viral": int(os.environ.get("VIRAL_CH", "-100"))
     }
     
+    # শর্টনার ও ভেরিফাই সেটিংস
     SHORTENER_URL = os.environ.get("SHORTENER_URL", "")
     SHORTENER_API = os.environ.get("SHORTENER_API", "")
     SHORTENER_ON = os.environ.get("SHORTENER_ON", "False").lower() == "true"
+    [span_4](start_span)VERIFY_EXPIRE = 86400 # ২৪ ঘণ্টা (সেকেন্ডে)[span_4](end_span)
